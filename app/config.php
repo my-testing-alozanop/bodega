@@ -16,7 +16,6 @@ try{
 }
 
 $URL = "http://localhost:3000";
-/*
-date_default_timezone_set("America/Caracas");
-$fechaHora = date('Y-m-d H:i:s'); */
 
+date_default_timezone_set("America/Guatemala");
+$fechaHora = date('Y-m-d H:i:s');
