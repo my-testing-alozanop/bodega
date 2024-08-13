@@ -164,5 +164,3 @@ include ('../app/controllers/almacen/listado_de_productos.php');
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     });
 </script>
-
-</script>
