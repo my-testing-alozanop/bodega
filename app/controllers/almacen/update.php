@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: HILARIWEB
+ * Date: 30/1/2023
+ * Time: 18:47
+ */
 
 include ('../../config.php');
 
@@ -68,6 +74,5 @@ if($sentencia->execute()){
     $_SESSION['icono'] = "error";
     header('Location: '.$URL.'/almacen/update.php?id='.$id_producto);
 }
-
 
 

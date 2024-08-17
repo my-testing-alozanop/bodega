@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: HILARIWEB
+ * Date: 30/1/2023
+ * Time: 18:08
+ */
+
 
 $id_producto_get = $_GET['id'];
 

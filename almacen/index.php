@@ -45,19 +45,19 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                            <div class="table table-responsive">
                                <table id="example1" class="table table-bordered table-striped table-sm">
                                    <thead>
-                                   <tr class="text-center">
-                                       <th>Nro</th>
-                                       <th>Código</th>
-                                       <th>Categoría</th>
-                                       <th>Imagen</th>
-                                       <th>Nombre</th>
-                                       <th>Descripción</th>
-                                       <th>Stock</th>
-                                       <th>Precio compra</th>
-                                       <th>Precio venta</th>
-                                       <th>Fecha compra</th>
-                                       <th>Usuario</th>
-                                       <th>Acciones</th>
+                                   <tr>
+                                       <th><center>Nro</center></th>
+                                       <th><center>Código</center></th>
+                                       <th><center>Categoría</center></th>
+                                       <th><center>Imagen</center></th>
+                                       <th><center>Nombre</center></th>
+                                       <th><center>Descripción</center></th>
+                                       <th><center>Stock</center></th>
+                                       <th><center>Precio compra</center></th>
+                                       <th><center>Precio venta</center></th>
+                                       <th><center>Fecha compra</center></th>
+                                       <th><center>Usuario</center></th>
+                                       <th><center>Acciones</center></th>
                                    </tr>
                                    </thead>
                                    <tbody>
@@ -66,7 +66,7 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                                    foreach ($productos_datos as $productos_dato){
                                        $id_producto = $productos_dato['id_producto']; ?>
                                        <tr>
-                                           <td class="text-center"><?php echo $contador = $contador + 1; ?></td>
+                                           <td><?php echo $contador = $contador + 1; ?></td>
                                            <td><?php echo $productos_dato['codigo'];?></td>
                                            <td><?php echo $productos_dato['categoria'];?></td>
                                            <td>
@@ -74,32 +74,35 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                                            </td>
                                            <td><?php echo $productos_dato['nombre'];?></td>
                                            <td><?php echo $productos_dato['descripcion'];?></td>
-                                           <?php 
+                                           <?php
                                            $stock_actual = $productos_dato['stock'];
                                            $stock_maximo = $productos_dato['stock_maximo'];
                                            $stock_minimo = $productos_dato['stock_minimo'];
-                                           if ($stock_actual < $stock_minimo) {?>
-                                            <td style="background-color: #ee868b;"><?php echo $productos_dato['stock'];?></td>
-                                            <?php
+                                           if($stock_actual < $stock_minimo){ ?>
+                                               <td style="background-color: #ee868b"><center><?php echo $productos_dato['stock'];?></center></td>
+                                           <?php
                                            }
-                                           else if ($stock_actual > $stock_maximo) {?>
-                                           <td style="background-color: #8ac68d;"><?php echo $productos_dato['stock'];?></td>
-                                           <?php 
-                                           }else { ?>
-                                            <td><?php echo $productos_dato['stock'];?></td>
-                                            <?php
+                                           else if($stock_actual > $stock_maximo){ ?>
+                                               <td style="background-color: #8ac68d"><center><?php echo $productos_dato['stock'];?></center></td>
+                                           <?php
+                                           }else{ ?>
+                                               <td><center><?php echo $productos_dato['stock'];?></center></td>
+                                           <?php
                                            }
                                            ?>
+
                                            <td><?php echo $productos_dato['precio_compra'];?></td>
                                            <td><?php echo $productos_dato['precio_venta'];?></td>
                                            <td><?php echo $productos_dato['fecha_ingreso'];?></td>
                                            <td><?php echo $productos_dato['email'];?></td>
                                            <td>
+                                               <center>
                                                    <div class="btn-group">
                                                        <a href="/almacen/show.php?id=<?php echo $id_producto; ?>" type="button" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Ver</a>
                                                        <a href="/almacen/update.php?id=<?php echo $id_producto; ?>" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil-alt"></i> Editar</a>
                                                        <a href="/almacen/delete.php?id=<?php echo $id_producto; ?>" type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Borrar</a>
                                                    </div>
+                                               </center>
                                            </td>
                                        </tr>
                                        <?php

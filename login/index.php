@@ -39,12 +39,17 @@
     }
     ?>
 
+    <center>
+        <img src="https://img.freepik.com/vector-gratis/gerentes-startups-que-presentan-analizan-tabla-crecimiento-ventas-grupo-trabajadores-monton-dinero-efectivo-cohetes-diagramas-barras-flecha-monton-dinero_74855-14166.jpg?w=996&t=st=1673983349~exp=1673983949~hmac=b50c9a1d93c8d39cec56f10df254278c5ab4acba8fb0c9a52e31eede2ebf03bc"
+             alt="" width="300px">
+    </center>
+    <br>
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="../public/templeates/AdminLTE-3.2.0/index2.html" class="h1"><b>Sistema de </b>BODEGA</a>
+            <a href="../public/templeates/AdminLTE-3.2.0/index2.html" class="h1"><b>Sistema de </b>VENTAS</a>
         </div>
         <div class="card-body">
-            <p class="login-box-msg">INICIAR SESIÓN</p>
+            <p class="login-box-msg">Ingrese sus datos</p>
 
             <form action="../app/controllers/login/ingreso.php" method="post">
                 <div class="input-group mb-3">
@@ -67,7 +72,7 @@
                 <div class="row">
                     <!-- /.col -->
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">INGRESAR</button>
+                        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
                     </div>
                     <!-- /.col -->
                 </div>

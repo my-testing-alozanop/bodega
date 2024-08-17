@@ -48,10 +48,10 @@ include ('../app/controllers/categorias/listado_de_categoria.php');
                         <div class="card-body" style="display: block;">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
-                                <tr class="text-center">
-                                    <th>Nro</th>
-                                    <th>Nombre de la categoría</th>
-                                    <th>Acciones</th>
+                                <tr>
+                                    <th><center>Nro</center></th>
+                                    <th><center>Nombre de la categoría</center></th>
+                                    <th><center>Acciones</center></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -61,9 +61,10 @@ include ('../app/controllers/categorias/listado_de_categoria.php');
                                     $id_categoria = $categorias_dato['id_categoria'];
                                     $nombre_categoria = $categorias_dato['nombre_categoria']; ?>
                                     <tr>
-                                        <td class="text-center"><?php echo $contador = $contador + 1;?></td>
+                                        <td><center><?php echo $contador = $contador + 1;?></center></td>
                                         <td><?php echo $categorias_dato['nombre_categoria'];?></td>
                                         <td>
+                                            <center>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-success" data-toggle="modal"
                                                             data-target="#modal-update<?php echo $id_categoria;?>">
@@ -119,7 +120,7 @@ include ('../app/controllers/categorias/listado_de_categoria.php');
                                                     </script>
                                                     <div id="respuesta_update<?php echo $id_categoria;?>"></div>
                                                 </div>
-                                            
+                                            </center>
                                         </td>
                                     </tr>
                                     <?php
@@ -127,10 +128,10 @@ include ('../app/controllers/categorias/listado_de_categoria.php');
                                 ?>
                                 </tbody>
                                 <tfoot>
-                                <tr class="text-center">
-                                    <th>Nro</th>
-                                    <th>Nombre de la categoría</th>
-                                    <th>Acciones</th>
+                                <tr>
+                                    <th><center>Nro</center></th>
+                                    <th><center>Nombre de la categoría</center></th>
+                                    <th><center>Acciones</center></th>
                                 </tr>
                                 </tfoot>
                             </table>
@@ -258,7 +259,6 @@ include ('../app/controllers/categorias/listado_de_categoria.php');
     });
 </script>
 <div id="respuesta"></div>
-
 
 
 

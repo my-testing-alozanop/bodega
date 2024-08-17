@@ -150,7 +150,7 @@ include ('../app/controllers/almacen/cargar_producto.php');
                                                     <input type="file" name="image" class="form-control" id="file">
                                                     <input type="text" name="image_text" value="<?php echo $imagen; ?>" hidden>
                                                     <br>
-                                                    <output id="list">
+                                                    <output id="list" style="">
                                                         <img src="<?php echo $URL."/almacen/img_productos/".$imagen; ?>" width="100%" alt="">
                                                     </output>
                                                     <script>

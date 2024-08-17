@@ -44,10 +44,10 @@ include ('../app/controllers/roles/listado_de_roles.php');
                         <div class="card-body" style="display: block;">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
-                                <tr class="text-center">
-                                    <th>Nro</th>
-                                    <th>Nombre del rol</th>
-                                    <th>Acciones</th>
+                                <tr>
+                                    <th><center>Nro</center></th>
+                                    <th><center>Nombre del rol</center></th>
+                                    <th><center>Acciones</center></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -56,14 +56,15 @@ include ('../app/controllers/roles/listado_de_roles.php');
                                 foreach ($roles_datos as $roles_dato){
                                     $id_rol = $roles_dato['id_rol']; ?>
                                     <tr>
-                                        <td class="text-center"><?php echo $contador = $contador + 1;?></td>
+                                        <td><center><?php echo $contador = $contador + 1;?></center></td>
                                         <td><?php echo $roles_dato['rol'];?></td>
                                         <td>
+                                            <center>
                                                 <div class="btn-group">
                                                     <a href="/roles/update.php?id=<?php echo $id_rol; ?>" type="button" class="btn btn-success">
                                                         <i class="fa fa-pencil-alt"></i> Editar</a>
                                                 </div>
-                                            
+                                            </center>
                                         </td>
                                     </tr>
                                     <?php
@@ -71,10 +72,10 @@ include ('../app/controllers/roles/listado_de_roles.php');
                                 ?>
                                 </tbody>
                                 <tfoot>
-                                <tr class="text-center">
-                                    <th>Nro</th>
-                                    <th>Nombre del rol</th>
-                                    <th>Acciones</th>
+                                <tr>
+                                    <th><center>Nro</center></th>
+                                    <th><center>Nombre del rol</center></th>
+                                    <th><center>Acciones</center></th>
                                 </tr>
                                 </tfoot>
                             </table>

@@ -40,7 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">SISTEMA DE BODEGA </a>
+                <a href="#" class="nav-link">SISTEMA DE VENTAS </a>
             </li>
         </ul>
 
@@ -59,8 +59,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="<?php echo $URL;?>" class="brand-link">
-            <img src="<?php echo $URL;?>/public/images/logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">ITM</span>
+            <img src="<?php echo $URL;?>/public/images/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">SIS VENTAS</span>
         </a>
 
         <!-- Sidebar -->
@@ -192,6 +192,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
+
                     <li class="nav-item ">
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-cart-plus"></i>
@@ -218,6 +219,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
+
                     <li class="nav-item ">
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-car"></i>
@@ -230,11 +232,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <li class="nav-item">
                                 <a href="<?php echo $URL;?>/proveedores" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Listado de Proveedores</p>
+                                    <p>Listado de proveedores</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+
+
+
+
+                     <li class="nav-item ">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-shopping-basket"></i>
+                            <p>
+                                Ventas
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/ventas" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Listado de ventas</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/ventas/create.php" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Realizar venta</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
 
 
                     <li class="nav-item">

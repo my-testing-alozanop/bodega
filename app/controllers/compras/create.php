@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: HILARIWEB
+ * Date: 15/2/2023
+ * Time: 19:35
+ */
 
 include ('../../config.php');
 
@@ -65,3 +71,8 @@ if($sentencia->execute()){
     </script>
     <?php
 }
+
+
+
+
+

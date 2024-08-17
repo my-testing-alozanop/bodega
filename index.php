@@ -8,6 +8,7 @@ include ('app/controllers/roles/listado_de_roles.php');
 include ('app/controllers/categorias/listado_de_categoria.php');
 include ('app/controllers/almacen/listado_de_productos.php');
 include ('app/controllers/proveedores/listado_de_proveedores.php');
+include ('app/controllers/compras/listado_de_compras.php');
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -17,7 +18,7 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0">Bienvenido al SISTEMA de BODEGA - <?php echo $rol_sesion; ?> </h1>
+                    <h1 class="m-0">Bienvenido al SISTEMA de VENTAS - <?php echo $rol_sesion; ?> </h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -29,8 +30,8 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
     <div class="content">
         <div class="container-fluid">
 
-            <h4>Contenido del Sistema</h4>
-            <br>
+            Contenido del sistema
+            <br><br>
 
             <div class="row">
 
@@ -93,9 +94,9 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
                             }
                             ?>
                             <h3><?php echo $contador_de_categorias;?></h3>
-                            <p>Categorias Registradas</p>
+                            <p>Categorías Registrados</p>
                         </div>
-                        <a href="<?php echo $URL;?>/roles/categorias">
+                        <a href="<?php echo $URL;?>/categorias">
                             <div class="icon">
                                 <i class="fas fa-tags"></i>
                             </div>
@@ -105,7 +106,6 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
                         </a>
                     </div>
                 </div>
-
 
 
                 <div class="col-lg-3 col-6">
@@ -131,7 +131,9 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
                     </div>
                 </div>
 
-                
+
+
+
 
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-dark">
@@ -158,6 +160,31 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
 
 
 
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <?php
+                            $contador_de_compras = 0;
+                            foreach ($compras_datos as $compras_dato){
+                                $contador_de_compras = $contador_de_compras + 1;
+                            }
+                            ?>
+                            <h3><?php echo $contador_de_compras;?></h3>
+                            <p>Compras Registradas</p>
+                        </div>
+                        <a href="<?php echo $URL;?>/compras">
+                            <div class="icon">
+                                <i class="fas fa-cart-plus"></i>
+                            </div>
+                        </a>
+                        <a href="<?php echo $URL;?>/compras" class="small-box-footer">
+                            Más detalle <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
             </div>
 
             <!-- /.row -->
@@ -168,7 +195,6 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
 <!-- /.content-wrapper -->
 
 <?php include ('layout/parte2.php'); ?>
-
 
 
 
