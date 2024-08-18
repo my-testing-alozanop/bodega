@@ -27,9 +27,9 @@ if($sentencia->execute()){
 
 
     ?>
-    <script>
+    <!-- <script>
         location.href = "<?php echo $URL;?>/ventas/create.php";
-    </script>
+    </script> -->
     <?php
 }
 
