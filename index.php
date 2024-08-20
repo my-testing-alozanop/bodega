@@ -9,6 +9,8 @@ include ('app/controllers/categorias/listado_de_categoria.php');
 include ('app/controllers/almacen/listado_de_productos.php');
 include ('app/controllers/proveedores/listado_de_proveedores.php');
 include ('app/controllers/compras/listado_de_compras.php');
+include ('app/controllers/ventas/listado_de_ventas.php');
+include ('app/controllers/clientes/listado_de_clientes.php');
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -178,6 +180,59 @@ include ('app/controllers/compras/listado_de_compras.php');
                             </div>
                         </a>
                         <a href="<?php echo $URL;?>/compras" class="small-box-footer">
+                            Más detalle <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <?php
+                            $contador_de_ventas = 0;
+                            foreach ($ventas_datos as $ventas_dato){
+                                $contador_de_ventas = $contador_de_ventas + 1;
+                            }
+                            ?>
+                            <h3><?php echo $contador_de_ventas;?></h3>
+                            <p>Ventas Registradas</p>
+                        </div>
+                        <a href="<?php echo $URL;?>/ventas">
+                            <div class="icon">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                        </a>
+                        <a href="<?php echo $URL;?>/ventas" class="small-box-footer">
+                            Más detalle <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <?php
+                            $contador_de_clientes = 0;
+                            foreach ($clientes_datos as $clientes_dato){
+                                $contador_de_clientes = $contador_de_clientes + 1;
+                            }
+                            ?>
+                            <h3><?php echo $contador_de_clientes;?></h3>
+                            <p>Clientes Registrados</p>
+                        </div>
+                        <a href="<?php echo $URL;?>/clientes">
+                            <div class="icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                        </a>
+                        <a href="<?php echo $URL;?>/clientes" class="small-box-footer">
                             Más detalle <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>

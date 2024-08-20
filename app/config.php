@@ -3,7 +3,7 @@
 define('SERVIDOR','localhost');
 define('USUARIO','root');
 define('PASSWORD','root');
-define('BD','sistemadebodega');
+define('BD','sistema_ventas');
 
 $servidor = "mysql:dbname=".BD.";host=".SERVIDOR;
 
@@ -19,3 +19,5 @@ $URL = "http://localhost:3000";
 
 date_default_timezone_set("America/Guatemala");
 $fechaHora = date('Y-m-d H:i:s');
+
+$fecha_actual = date('d/m/Y');
